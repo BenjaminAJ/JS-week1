@@ -1,0 +1,156 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./bootstrap-5.1.3-dist/css/bootstrap.min.css">
+</head>
+
+<body>
+
+    <div class="container d-none">
+        <h1>JS datatypes</h1>
+        <ol>
+            <li>String</li>
+            <li>Number</li>
+            <li>Array</li>
+            <li>object</li>
+            <li>Boolean</li>
+        </ol>
+    </div>
+
+
+    <div class="container d-none">
+        <h1>JS operators</h1>
+        <ol>
+            <li>Arithmetic</li> //Post and pre
+            <li>Assignment</li>
+            <li>Logical</li>
+            <li>Comparison</li>
+            <li>Conditional</li>
+            <li>Type</li>
+            <li>Bitwise</li>
+        </ol>
+
+
+    </div>
+
+    <div class="container">
+        <h1 id="h1">Classwork Day 2</h1>
+        <!-- Mini calculator to get sum of two numbers -->
+        <p>Mini Calculator</p>
+        <input type="text" id="textbox1" placeholder="Enter value">
+        <input type="text" id="textbox2" placeholder="Enter value">
+        <button type="submit" class="btn btn-primary" onclick="getSum()">Click Me</button>
+        <p id="p"></p>
+    </div>
+
+    <div class="container">
+        <h1 id="h1">Classwork Day 3</h1>
+        <p>ghostWrite</p>
+        <input type="text" id="textbox11" onkeyup="ghostWrite()" placeholder="Enter value">
+        <input type="text" id="textbox22" placeholder="Enter value">
+        <p id="p"></p>
+    </div>
+
+    <div class="container">
+        <h1 id="h1">Classwork Day 3</h1>
+        <p>What day of the week is it?</p>
+        <input type="text" id="textbox33" placeholder="Enter day of the week">
+        <button type="submit" class="btn btn-primary" onclick="getDay()">Click Me</button>
+        <p id="p2"></p>
+    </div>
+    <div class="container">
+        <!-- Mini calculator -->
+        <h1 id="h1">Classwork Day 3</h1>
+        <p>Calculator</p>
+        <input type="text" id="textbox44" class="inputbox" placeholder="Enter value">
+        <input type="text" id="textbox55" class="inputbox" placeholder="Enter operator">
+        <input type="text" id="textbox66" class="inputbox" placeholder="Enter value">
+        <input type="text" id="textbox77" disabled class="inputbox" placeholder="Answer">
+        <button type="submit" class="btn btn-primary" onclick="calculate()">Click Me</button>
+        <!-- <button type="submit" class="btn btn-primary" onclick="clear()">Clear</button> -->
+        <p id="p2"></p>
+    </div>
+
+    <script src="./index.js"></script>
+</body>
+
+</html>
+<script>
+    // alert('from internal')
+
+    // Get input data from two input elements and find the sum
+    function getSum(){
+        // Grab data from input
+        let value1=document.getElementById('textbox1').value;
+        let value2=document.getElementById('textbox2').value;
+        // console.log(value);
+        // console.log(typeof(value1));
+        // console.log(typeof(value2));
+        
+        // Converting string to Number
+        // let a = Number(value1);
+        // let b = Number(value2);
+
+        // console.log(typeof(a));
+        // console.log(typeof(b));
+
+        // Assign data to p element
+        // document.getElementById('p').innerHTML='Solution is ' + (value1 + value2);  // Output string
+        document.getElementById('p').innerHTML='Solution is ' + (Number(value1) + Number(value2));
+        // document.getElementById('h1').innerHTML+=value;
+        
+        // Clear input element
+        // document.getElementById('textbox').value='';
+        // document.getElementById('textbox').value=null;
+
+    }
+
+    // Get input data from one input and write in another input
+    function ghostWrite(){
+        // Get value from textbox1
+        let value1=document.getElementById('textbox11').value
+        // console.log(value1);
+
+        // Write value into textbox2
+        document.getElementById('textbox22').value=value1
+        // console.log(document.getElementById('textbox22').value=value1)
+
+        // Same function in one line
+        // document.getElementById('textbox22').value=document.getElementById('textbox11').value
+    }
+
+    // Check Day of the week from input
+    function getDay(){
+        let value1=document.getElementById('textbox33').value
+
+        if (value1=='monday') {
+            console.log("Hello, it's monday");
+        }
+        else if (value1== 'tuesday'){
+            console.log("Hello, it's tuesday");
+        }
+        else if (value1== 'wednesday'){
+            console.log("Hello, it's wednesday");
+        }
+        else if (value1== 'thursday'){
+            console.log("Hello, it's thursday");
+        }
+        else if (value1== 'friday'){
+            console.log("Hello, it's friday");
+        }
+        else if (value1== 'saturday'){
+            console.log("Hello, it's saturday");
+        }
+        else if (value1== 'sunday'){
+            console.log("Hello, it's sunday");
+        }
+        else{
+            console.log("Enter a valid day");
+        }
+
+    }
+</script>
